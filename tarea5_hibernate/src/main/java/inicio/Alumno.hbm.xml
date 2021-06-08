@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 may. 2021 19:15:25 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="inicio.Alumno" table="ALUMNO">
+        <id name="idAlumno" type="int">
+            <column name="IDALUMNO" />
+            <generator class="assigned" />
+        </id>
+        <property name="apellido" type="java.lang.String">
+            <column name="APELLIDO" />
+        </property>
+        <property name="edad" type="int">
+            <column name="EDAD" />
+        </property>
+        <property name="nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        
+        
+    </class>
+    <query name="mostrarAlumnos"><![CDATA[
+         SELECT a FROM Alumno a
+     ]]></query>
+     
+<!--     <query name="findArticulosByDescripcion"><![CDATA [ -->
+<!--          from Articulo where articulo.descripcion like :desc ]]&gt; -->
+<!-- </query> -->
+</hibernate-mapping>
